@@ -1,1 +1,0 @@
-# singhbino3d.github.io
