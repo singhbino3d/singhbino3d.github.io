@@ -39,7 +39,13 @@
         </p>
 
         <nav class="links">
-          <a href="mailto:singh96binod@gmail.com">Email</a>
+          <details class="email-menu">
+            <summary>Email</summary>
+            <div class="email-options">
+              <a href="mailto:binsi@dtu.dk">binsi@dtu.dk</a>
+              <a href="mailto:singh96binod@gmail.com">singh96binod@gmail.com</a>
+            </div>
+          </details>
           <a href="data/CV.pdf">CV</a>
           <a href="https://scholar.google.com/citations?user=nbD7gP8lXYAC&amp;hl=en">Google Scholar</a>
           <a href="https://github.com/singhbino3d/">GitHub</a>
@@ -66,7 +72,7 @@
             Akira-Miranda Adeyomi Adeniran-Lowe, <strong>Binod Singh</strong>, Lars Arnold Dethlefsen,
             Lazaros Nalpantidis, Theodora Kontogianni
           </p>
-          <p class="venue">arXiv, 2026</p>
+          <p class="venue">arXiv, 2026 &middot; Under Review</p>
           <div class="paper-links">
             <a href="https://arxiv.org/abs/2610.01589">arXiv</a>
             <a href="https://aka-lowe.github.io/pager/">Project Page</a>
@@ -108,5 +114,13 @@
     </footer>
 
   </main>
+
+  <script>
+    // Close the email menu when clicking anywhere outside it
+    document.addEventListener('click', function (e) {
+      var menu = document.querySelector('.email-menu');
+      if (menu && menu.open && !menu.contains(e.target)) menu.open = false;
+    });
+  </script>
 </body>
 </html>
